@@ -30,34 +30,33 @@ namespace BussinesLogic.Logic.Sample
         {
             int result;
 
-            try
-            {
+            //try
+            //{
                 // 掛け算を実施する
                 result = request.KakezanHikisuuOne * request.KakezanHikisuuTwo;
-            }
-            catch(Exception e)
-            {
-                // エラーメッセージセット
-                string errorMessage = $"掛け算エラー発生 exception=${e.Message}";
+            //}
+            //catch(Exception e)
+            //{
+            //    // エラーメッセージセット
+            //    string errorMessage = $"掛け算エラー発生 exception=${e.Message}";
 
-                // エラーログ出力
-                _logger.LogError(e, errorMessage);
+            //    // エラーログ出力
+            //    _logger.LogError(e, errorMessage);
 
-                // エラーが発生した場合は、エラーステータス、エラーメッセージを
-                // セットしレスポンスを返す
-                return new SampleKakezanResponce()
-                {
-                    // エラーステータスをセット
-                    Status = Const.ResponceStatus.Error
-                    ,
-                    // エラーメッセージをセット
-                    ErrorMessage = errorMessage
-                    ,
-                    // 掛け算結果は 0 をセットしておく
-                    KakezanResult = 0
-                };
-
-            }
+            //    // エラーが発生した場合は、エラーステータス、エラーメッセージを
+            //    // セットしレスポンスを返す
+            //    return new SampleKakezanResponce()
+            //    {
+            //        // エラーステータスをセット
+            //        Status = Const.ResponceStatus.Error
+            //        ,
+            //        // エラーメッセージをセット
+            //        ErrorMessage = errorMessage
+            //        ,
+            //        // 掛け算結果は 0 をセットしておく
+            //        KakezanResult = 0
+            //    };
+            //}
 
             // レスポンスオブジェクトを生成し、同時に掛け算結果も格納する。
             // ※インスタンス生成時の初期値指定
