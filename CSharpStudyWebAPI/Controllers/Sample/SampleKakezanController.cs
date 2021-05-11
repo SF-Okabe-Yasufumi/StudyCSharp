@@ -33,7 +33,7 @@ namespace CSharpStudyWebAPI.Controllers.Sample
         public SampleKakezanResponce Execute(SampleKakezanRequest request)
         {
             _logger.LogInformation("----------------------------------------------------------------------------------------");
-            _logger.LogInformation("掛け算実行リクエスト");
+            _logger.LogInformation("掛け算実行リクエスト ");
             _logger.LogInformation($"---------- SampleKakezanRequest.KakezanHikisuuOne : [{request.KakezanHikisuuOne}]");
             _logger.LogInformation($"---------- SampleKakezanRequest.KakezanHikisuuTwo : [{request.KakezanHikisuuTwo}]");
             _logger.LogInformation("----------------------------------------------------------------------------------------");
